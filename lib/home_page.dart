@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'menu.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,40 +18,35 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.all(24),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children:
-            [Image.asset(
-              'assets/images/PlaceholderPizza.png',
-              width: 250,
-              height: 250,
-              fit: BoxFit.contain,
-            ),
+            children: [
+              Image.asset(
+                'assets/images/PlaceholderPizza.png',
+                width: 250,
+                height: 250,
+                fit: BoxFit.contain,
+              ),
               const SizedBox(height: 20),
 
               const Text(
                 'Welcome to WOW Pizza! Have A Amazing Journey With Pizza! ',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 32),
 
               const Text(
                 'Fresh, Hot & Delicious!',
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 30),
 
               SizedBox(
                 width: 250,
                 height: 50,
-                child:OutlinedButton(
+                child: OutlinedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/menu');
-                    },
+                  },
                   child: const Text('Our Menu'),
                 ),
               ),
@@ -61,11 +55,11 @@ class HomePage extends StatelessWidget {
 
               SizedBox(
                 width: 250,
-              height: 50,
-                child:OutlinedButton(
+                height: 50,
+                child: OutlinedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/about');
-                    },
+                  },
                   child: const Text('About Us'),
                 ),
               ),
@@ -75,7 +69,7 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 width: 250,
                 height: 50,
-                child:OutlinedButton(
+                child: OutlinedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/contact');
                   },
@@ -91,7 +85,8 @@ class HomePage extends StatelessWidget {
                   IconButton(
                     tooltip: 'Twitter/X',
                     onPressed: () {
-                      Navigator.pushNamed(context, '/twitter');},
+                      Navigator.pushNamed(context, '/twitter');
+                    },
                     icon: Image.asset(
                       'assets/images/X.png',
                       width: 40,
@@ -99,17 +94,16 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
 
-
                   IconButton(
                     tooltip: 'Facebook',
                     onPressed: () {
                       Navigator.pushNamed(context, '/facebook');
                     },
                     icon: Image.asset(
-                    'assets/images/fb.png',
-                    width: 40,
-                    height: 40,
-                  ),
+                      'assets/images/fb.png',
+                      width: 40,
+                      height: 40,
+                    ),
                   ),
                 ],
               ),
