@@ -1,5 +1,8 @@
+
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart';
+
+import 'home_page.dart';
+import 'menu.dart';
 
 void main() {
   runApp(const WOWPizzaApp());
@@ -8,17 +11,25 @@ void main() {
 class WOWPizzaApp extends StatelessWidget {
   const WOWPizzaApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'WOW PIZZA !',
+      title: 'WOW Pizza',
+
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.blueGrey),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blueGrey,
+        ),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+
+      initialRoute: '/',
+
+      routes: {
+        '/': (context) => const HomePage(),
+        '/menu': (context) => const MenuPage(),
+      },
     );
   }
 }
