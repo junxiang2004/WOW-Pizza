@@ -1,9 +1,11 @@
+
 import 'package:flutter/material.dart';
 
 import 'facebook.dart';
 import 'home_page.dart';
 import 'menu.dart';
 import 'twitter.dart';
+import 'about_page.dart'; // Added About Page
 
 void main() {
   runApp(const WOWPizzaApp());
@@ -19,7 +21,9 @@ class WOWPizzaApp extends StatelessWidget {
       title: 'WOW Pizza',
 
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blueGrey,
+        ),
         useMaterial3: true,
       ),
 
@@ -30,6 +34,7 @@ class WOWPizzaApp extends StatelessWidget {
         '/menu': (context) => const MenuPage(),
         '/twitter': (context) => const Twitter(),
         '/facebook': (context) => const Facebook(),
+        '/about': (context) => const AboutPage(),
       },
     );
   }
