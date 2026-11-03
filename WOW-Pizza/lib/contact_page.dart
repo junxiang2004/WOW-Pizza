@@ -47,7 +47,9 @@ class _ContactPageState extends State<ContactPage> {
 
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('Message sent successfully! We will get back to you soon.'),
+            content: Text(
+              'Message sent successfully! We will get back to you soon.',
+            ),
             backgroundColor: Colors.green,
           ),
         );
@@ -148,14 +150,14 @@ class _ContactPageState extends State<ContactPage> {
                     ),
                     child: _isSubmitting
                         ? const SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: CircularProgressIndicator(strokeWidth: 2),
-                    )
+                            height: 20,
+                            width: 20,
+                            child: CircularProgressIndicator(strokeWidth: 2),
+                          )
                         : const Text(
-                      'Send Message',
-                      style: TextStyle(fontSize: 16),
-                    ),
+                            'Send Message',
+                            style: TextStyle(fontSize: 16),
+                          ),
                   ),
                   const SizedBox(height: 40),
                   const Divider(),
@@ -164,10 +166,7 @@ class _ContactPageState extends State<ContactPage> {
                   // Direct Contact Info Section
                   const Text(
                     'Other Ways to Reach Us',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 12),
                   const ListTile(
@@ -179,8 +178,13 @@ class _ContactPageState extends State<ContactPage> {
                     title: Text('+60 12-345 6789'),
                   ),
                   const ListTile(
-                    leading: Icon(Icons.location_on_outlined, color: Colors.blue),
-                    title: Text('No.666 , Jalan Six, 93000 Kuching, Sarawak, Malaysia'),
+                    leading: Icon(
+                      Icons.location_on_outlined,
+                      color: Colors.blue,
+                    ),
+                    title: Text(
+                      'No.666 , Jalan Six, 93000 Kuching, Sarawak, Malaysia',
+                    ),
                   ),
                 ],
               ),
