@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'facebook.dart';
 import 'home_page.dart';
 import 'menu.dart';
+import 'twitter.dart';
 
 void main() {
   runApp(const WOWPizzaApp());
@@ -26,6 +28,8 @@ class WOWPizzaApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomePage(),
         '/menu': (context) => const MenuPage(),
+        '/twitter':(context) => const Twitter(),
+        '/facebook': (context) => const Facebook()
       },
     );
   }
