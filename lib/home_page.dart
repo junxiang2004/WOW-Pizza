@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/images/PlaceholderPizza.png',
+                'assets/images/ChickenPizza.png',
                 width: 250,
                 height: 250,
                 fit: BoxFit.contain,
