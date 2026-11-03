@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import 'home_page.dart';
@@ -18,7 +19,9 @@ class WOWPizzaApp extends StatelessWidget {
       title: 'WOW Pizza',
 
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blueGrey,
+        ),
         useMaterial3: true,
       ),
 
