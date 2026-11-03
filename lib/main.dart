@@ -7,7 +7,6 @@ import 'home_page.dart';
 import 'menu.dart';
 import 'twitter.dart';
 import 'about_page.dart'; // Added About Page
-import 'about_page.dart'; // Added About Page
 
 void main() {
   runApp(const WOWPizzaApp());
@@ -36,7 +35,6 @@ class WOWPizzaApp extends StatelessWidget {
         '/menu': (context) => const MenuPage(),
         '/twitter': (context) => const Twitter(),
         '/facebook': (context) => const Facebook(),
-        '/about': (context) => const AboutPage(),
         '/about': (context) => const AboutPage(),
       },
     );
