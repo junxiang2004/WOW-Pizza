@@ -28,8 +28,8 @@ class WOWPizzaApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomePage(),
         '/menu': (context) => const MenuPage(),
-        '/twitter':(context) => const Twitter(),
-        '/facebook': (context) => const Facebook()
+        '/twitter': (context) => const Twitter(),
+        '/facebook': (context) => const Facebook(),
       },
     );
   }
