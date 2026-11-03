@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatelessWidget {
@@ -9,128 +8,186 @@ class AboutPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('About Us'),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blueGrey,
+        foregroundColor: Colors.white,
       ),
 
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
 
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              '🍕',
-              style: TextStyle(fontSize: 90),
-            ),
+            // PIZZA LOGO
+            const Center(child: Text('🍕', style: TextStyle(fontSize: 90))),
 
             const SizedBox(height: 20),
 
+            // WELCOME MESSAGE
             const Text(
               'Welcome to WOW Pizza!',
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-                color: Colors.green,
-              ),
               textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
 
             const SizedBox(height: 20),
 
+            // ABOUT RESTAURANT
             const Text(
               'About Our Restaurant',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-
-            const SizedBox(height: 10),
-
-            const Text(
-              'WOW Pizza serves delicious food at '
-              'affordable prices. Our goal is to '
-              'provide fresh and tasty meals '
-              'for our customers.',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 17),
-            ),
-
-            const SizedBox(height: 30),
-
-            const Text(
-              'Our Food Menu',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
 
             const SizedBox(height: 15),
 
-            const Card(
-              child: ListTile(
-                leading: Text(
-                  '🍝',
-                  style: TextStyle(fontSize: 30),
-                ),
-                title: Text('Pasta'),
-                subtitle: Text('Tomato sauce and cheese'),
-                trailing: Text('RM15'),
-              ),
-            ),
-
-            const Card(
-              child: ListTile(
-                leading: Text(
-                  '🍕',
-                  style: TextStyle(fontSize: 30),
-                ),
-                title: Text('Pizza'),
-                subtitle: Text('Cheese and chicken'),
-                trailing: Text('RM20'),
-              ),
-            ),
-
-            const Card(
-              child: ListTile(
-                leading: Text(
-                  '🍟',
-                  style: TextStyle(fontSize: 30),
-                ),
-                title: Text('Fries'),
-                subtitle: Text('Crispy fries with ketchup'),
-                trailing: Text('RM8'),
-              ),
+            const Text(
+              'WOW Pizza provides delicious food at '
+              'affordable prices. We aim to serve '
+              'fresh and tasty meals to our customers.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 17),
             ),
 
             const SizedBox(height: 30),
 
+            // WHAT WE OFFER
             const Text(
-              'About This Application',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
+              'What We Offer',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+
+            const SizedBox(height: 15),
+
+            // DELICIOUS PIZZA - EXPANDABLE CARD
+            Card(
+              child: ExpansionTile(
+                leading: const Text('🍕', style: TextStyle(fontSize: 35)),
+
+                title: const Text(
+                  'Delicious Pizza',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+
+                subtitle: const Text('Tap to view pizza details'),
+
+                children: [
+                  const Divider(),
+
+                  const Padding(
+                    padding: EdgeInsets.all(15),
+
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+
+                      children: [
+                        Text(
+                          'Chicken Cheese Pizza',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+
+                        SizedBox(height: 10),
+
+                        Text(
+                          'Freshly baked pizza with '
+                          'melted cheese, chicken '
+                          'and tomato sauce.',
+                          style: TextStyle(fontSize: 16),
+                        ),
+
+                        SizedBox(height: 15),
+
+                        Text(
+                          'Ingredients:',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+
+                        SizedBox(height: 10),
+
+                        Text('• Pizza dough'),
+                        Text('• Tomato sauce'),
+                        Text('• Mozzarella cheese'),
+                        Text('• Chicken'),
+
+                        SizedBox(height: 15),
+
+                        Text(
+                          'Price: RM20',
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
 
             const SizedBox(height: 10),
 
-            const Text(
-              'This application is developed using '
-              'Flutter and Dart. Customers can view '
-              'different food items, descriptions '
-              'and prices easily.',
-              style: TextStyle(fontSize: 17),
-              textAlign: TextAlign.center,
+            // FOOD MENU - CLICKABLE CARD
+            Card(
+              child: ListTile(
+                leading: const Icon(
+                  Icons.restaurant_menu,
+                  color: Colors.orange,
+                  size: 35,
+                ),
+
+                title: const Text(
+                  'Food Menu',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+
+                subtitle: const Text('Tap here to explore our food selection'),
+
+                trailing: const Icon(
+                  Icons.arrow_forward_ios,
+                  color: Colors.orange,
+                ),
+
+                onTap: () {
+                  Navigator.pushNamed(context, '/menu');
+                },
+              ),
             ),
 
             const SizedBox(height: 30),
 
+            // ABOUT APPLICATION
+            const Text(
+              'About This Application',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+
+            const SizedBox(height: 10),
+
+            const Text(
+              'WOW Pizza is a restaurant application '
+              'developed using Flutter and Dart. '
+              'Users can explore the restaurant menu '
+              'and view food information easily.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 17),
+            ),
+
+            const SizedBox(height: 30),
+
+            // BACK BUTTON
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Text('Back to Menu'),
+
+              child: const Text('Back'),
             ),
           ],
         ),

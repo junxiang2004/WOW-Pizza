@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'home_page.dart';
 import 'menu.dart';
-import 'about_page.dart'; 
+import 'about_page.dart'; // Added About Page
 
 void main() {
   runApp(const WOWPizzaApp());
