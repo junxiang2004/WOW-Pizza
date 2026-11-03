@@ -34,6 +34,8 @@ class _ContactPageState extends State<ContactPage> {
 
       // Simulate a network request
       Future.delayed(const Duration(seconds: 2), () {
+        if (!mounted) return;
+
         setState(() {
           _isSubmitting = false;
         });
@@ -72,7 +74,6 @@ class _ContactPageState extends State<ContactPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-
                   TextFormField(
                     controller: _nameController,
                     decoration: const InputDecoration(
@@ -190,4 +191,3 @@ class _ContactPageState extends State<ContactPage> {
     );
   }
 }
-
