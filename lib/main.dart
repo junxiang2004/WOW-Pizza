@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'home_page.dart';
 import 'menu.dart';
+import 'about_page.dart'; // Added About Page
 
 void main() {
   runApp(const WOWPizzaApp());
@@ -26,6 +27,7 @@ class WOWPizzaApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomePage(),
         '/menu': (context) => const MenuPage(),
+        '/about': (context) => const AboutPage(),
       },
     );
   }
