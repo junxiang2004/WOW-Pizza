@@ -34,7 +34,7 @@ class _TwitterState extends State<Twitter> {
                 Navigator.pushNamed(context, '/twitter'); // Twitter page
               },
               child: Image.asset(
-                'assets/images/Xs.png',
+                'assets/images/X.png',
                 fit: BoxFit.contain,
                 height: 30,
               ),
