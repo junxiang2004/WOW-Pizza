@@ -36,7 +36,7 @@ class _FacebookState extends State<Facebook> {
                 ); // Navigate to Twitter page
               },
               child: Image.asset(
-                'Images/twitter.png',
+                'assets/images/X.png',
                 fit: BoxFit.contain,
                 height: 30,
               ),
@@ -50,7 +50,7 @@ class _FacebookState extends State<Facebook> {
                 ); // Navigate to Facebook page
               },
               child: Image.asset(
-                'Images/facebook.png',
+                'assets/images/fb.png',
                 fit: BoxFit.contain,
                 height: 40,
               ),
