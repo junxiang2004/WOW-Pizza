@@ -6,7 +6,7 @@ class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Menu')),
+      appBar: AppBar(title: Text('Menu'), backgroundColor: Colors.redAccent),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -15,39 +15,39 @@ class MenuPage extends StatelessWidget {
               style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
             ),
             MenuCard(
-              name: 'TestPizza1',
-              imagePath: 'assets/images/PlaceholderPizza.png',
+              name: 'Vegetable Pizza',
+              imagePath: 'assets/images/VeggiePizza.png',
               price: '\$10.00',
-              description: 'This is a test Pizza1 taste very good',
+              description: 'This is a Vegetable Pizza, taste very good',
             ),
             MenuCard(
-              name: 'TestPizza2',
-              imagePath: 'assets/images/PlaceholderPizza.png',
-              price: '\$11.00',
-              description: 'This is a test Pizza2 taste really good~~',
-            ),
-            MenuCard(
-              name: 'TestPizza3',
-              imagePath: 'assets/images/PlaceholderPizza.png',
+              name: 'Cheese Pizza',
+              imagePath: 'assets/images/CheesePizza.png',
               price: '\$12.00',
+              description: 'This is a Cheese Pizza, taste really good~~',
+            ),
+            MenuCard(
+              name: 'Chicken Pizza',
+              imagePath: 'assets/images/ChickenPizza.png',
+              price: '\$14.00',
               description:
-                  'This is a test Pizza3 taste good until no word to say!!!',
+                  'This is a Chicken Pizza, taste good until no word to say!!!',
             ),
             Text(
               'Fries',
               style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
             ),
             MenuCard(
-              name: 'TestFries1',
-              imagePath: 'assets/images/PlaceholderFries.png',
+              name: 'French Fries',
+              imagePath: 'assets/images/Fries.png',
               price: '\$5.00',
-              description: 'This is a test Fries1 just kinda ok jak',
+              description: 'This is a French Fires, just kinda ok jak',
             ),
             MenuCard(
-              name: 'TestFries2',
-              imagePath: 'assets/images/PlaceholderFries.png',
-              price: '\$6.00',
-              description: 'This is a test Fries2 this one is really cook!',
+              name: 'Curly Fries',
+              imagePath: 'assets/images/CurlyFries.webp',
+              price: '\$7.00',
+              description: 'This is a Curly Fries, this one is really cook!',
             ),
           ],
         ),
